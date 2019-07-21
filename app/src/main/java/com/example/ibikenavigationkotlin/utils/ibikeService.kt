@@ -11,6 +11,9 @@ interface ibikeService {
     @POST("Service/Login")
     fun getAccout(@Body `object`: Any): Call<ResponseBody>
 
+    @POST("Service/GetPriceListMaterial")
+    fun getAll(@Body `object`: Any): Call<ResponseBody>
+
 
 
 }

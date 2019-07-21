@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ibikenavigationkotlin.model.DataAcount
+import com.example.ibikenavigationkotlin.utils.AppConfig
 import com.example.viewpagerkotlin.utils.ibikeService
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.login_layout.*
@@ -92,7 +93,10 @@ class LoginActivity : AppCompatActivity() {
 
                     var sdt= dataphone.result?.phone.toString()
 
-                    var x = dataphone.result?.customerName
+                    var x = dataphone.result?.customerName.toString()
+
+                       AppConfig.setPhoneNumber(x, this@LoginActivity)
+
 
                     val soDienThoai = edt_phone_number.getText().toString()
 
